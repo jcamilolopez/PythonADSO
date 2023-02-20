@@ -44,54 +44,6 @@ def cadena():
     print("Cadena en forma de titulo", cadena.title())
 #cadena()
 
-# Detetrminar que tipo de palabra es: aguda, grave, esdrujula sobre esdrujula 
-def ortografia(c):
-    if(c[-1]==225 or c[-1]==233 or c[-1]==237 or c[-1]==243 or c[-1]==233 or c[-1]==250):
-        print("aguda")
-    else:
-        print("No es aguda")
-#ortografia("café")
-
-def es_grave(palabra):
-    palabra = "fútbol"
-    palabra = palabra.lower()
-    ultima_vocal = -1
-    for i in range(len(palabra)):
-        if palabra[i] in "aeiouáéíóú":
-            ultima_vocal = i
-        if ultima_vocal == -1:
-            return False
-
-        if ultima_vocal == len(palabra) -1:
-            return True
-        elif ultima_vocal == len(palabra) -2  and palabra[-1] not in "ns":
-            return False
-#es_grave()
-
-#De una cadena diga cuantas vocales tiene, cuantas consonantes, cuantas vocales con tilde y cuantos caracteres especiales.
-def cadena():
-    cadena = "¡Hola, cómo estás? ¿Todo bien?"
-
-vocales = 0
-consonantes = 0
-vocales_tilde = 0
-especiales = 0
-
-for caracter in cadena:
-    caracter = caracter.lower()
-    
-    if caracter in "aeiou":
-        vocales += 1
-        
-        if caracter in "áéíóú":
-            vocales_tilde += 1
-    elif caracter.isalpha():
-        consonantes += 1
-    else:
-        especiales += 1
-
-print(f"La cadena tiene {vocales} vocales, {consonantes} consonantes, {vocales_tilde} vocales con tilde y {especiales} caracteres especiales.")
-
 # cuantas veces se repite un caracter dado
 def cadena(letra):
     cadena = "mamá"  
